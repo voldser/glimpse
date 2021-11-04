@@ -1,0 +1,6 @@
+webbrowser
+requests
+colorama
+urllib3
+bs4
+wget
