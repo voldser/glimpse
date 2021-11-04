@@ -5,14 +5,14 @@ os.popen('pip3 install -r requirements.txt').read()
 from wget import download
 
 def create_domain():
-        if True:
+        try:
                 dir = os.popen('pwd').read()
                 dir2 = os.popen("whereis sh").read().split()[1][:-2] + "glimpse"
                 file = open(dir2, "w")
                 file.write("cd " + dir + "python3 main.py")
                 file.close()
                 os.system("chmod +x " + dir2)
-        else: pass
+        except: pass
 
 
 
@@ -36,5 +36,5 @@ def Ngrok():
 
 Ngrok()
 create_domain()
-os.system("ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y"
+os.system("ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y")
 os.system('python3 main.py')
