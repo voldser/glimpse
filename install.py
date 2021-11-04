@@ -1,7 +1,7 @@
 from subprocess import check_output
 import os
 from platform import system as systemos, architecture
-os.system('pip install -r requirements.txt')
+os.system('pip3 install -r requirements.txt')
 from wget import download
 
 # NGROK
@@ -26,4 +26,4 @@ def Ngrok():
 Ngrok()
 
 os.system('ssh-keygen -t ed25519')
-os.system('python main.py')
+os.system('python3 main.py')
