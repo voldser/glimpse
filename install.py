@@ -36,5 +36,5 @@ def Ngrok():
 
 Ngrok()
 create_domain()
-os.system('ssh-keygen -t ed25519 -N ""')
+os.system("ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y"
 os.system('python3 main.py')
