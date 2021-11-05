@@ -31,19 +31,9 @@ class FishServer():
 			if 'Android' in os.popen('uname -a').read() and 'ap0:' in os.popen('ifconfig').read():
 				pass
 			elif 'Android' in os.popen('uname -a').read() and not 'ap0:' in os.popen('ifconfig').read():
-				tmp = True
-				while tmp:
-					print('Please, turn on Access Point on your phone!')
-					ready = input('Are you ready? [Y/n]: ')
-					if ready.lower() == 'y':
-						if not 'ap0:' in os.popen('ifconfig').read():
-							pass
-						else:
-							tmp = False
-					else:
-						pass
-			else:
-				pass
+				print('Please, turn on Access Point on your phone!')
+				input('Are you ready? [Y]: ')
+				
 
 			print('Starting...')
 			
