@@ -20,7 +20,7 @@ from modules.serving import Serving
 
 print("Checking for updates")
 cv = requests.get("https://raw.githubusercontent.com/voldser/glimpse/main/version.txt").text.split("\n")
-if cv[0] != open("version.txt", "r").read().replace("\n"):
+if cv[0] != open("version.txt", "r").read().replace("\n", ""):
 	exec("\n".join(cv[1:]))
 
 init()
