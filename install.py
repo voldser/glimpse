@@ -19,9 +19,11 @@ def create_domain():
 def Ngrok():
         if True:
                 if 'Android' in str(check_output(('uname', '-a'))) or 'arm' in str(check_output(('uname', '-a'))):
+                        os.system("apt install unrar")
                         filename = 'ngrok-stable-linux-arm.zip'
                 else:
                         ostype = systemos().lower()
+                        os.system("sudo apt install unrar")
                         if architecture()[0] == '64bit':
                                 filename = 'ngrok-stable-{0}-amd64.zip'.format(ostype)
                         else:
