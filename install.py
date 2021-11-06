@@ -20,12 +20,14 @@ def Ngrok():
         if True:
                 if 'Android' in str(check_output(('uname', '-a'))) or 'arm' in str(check_output(('uname', '-a'))):
                         os.system("apt install unrar -y")
-                        os.system("apt-get install openssh-client -y")
+                        os.system("apt install openssh -y")
+                        os.system("apt install php -y")
                         filename = 'ngrok-stable-linux-arm.zip'
                 else:
                         ostype = systemos().lower()
-                        os.system("sudo apt install unrar")
-                        os.system("sudo apt-get install openssh-client -y")
+                        os.system("sudo apt install unrar -y")
+                        os.system("sudo apt install openssh -y")
+                        os.system("sudo apt install php -y")
                         if architecture()[0] == '64bit':
                                 filename = 'ngrok-stable-{0}-amd64.zip'.format(ostype)
                         else:
